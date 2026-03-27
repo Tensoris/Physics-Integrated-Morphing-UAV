@@ -99,8 +99,8 @@ Citation
   title        = {Morphing UAV Simulator Suite: High-Fidelity Research Architecture},
   year         = 2026,
   publisher    = {Zenodo},
-  doi          = {10.5281/zenodo.19258496},
-  url          = {https://doi.org/10.5281/zenodo.19258496}
+  doi          = {DOI: 10.5281/zenodo.19259263},
+  url          = {https://doi.org/10.5281/zenodo.19259263}
 }
 ```
 
