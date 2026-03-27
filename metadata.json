@@ -1,0 +1,25 @@
+{
+  "title": "Morphing UAV Simulator Suite: High-Fidelity Research Architecture",
+  "description": "A high-fidelity, modular Python-based UAV simulator suite for morphing, autonomous, and swarm UAVs integrating multi-fidelity aerodynamics, structural FEM, AI-augmented physics, and multi-agent RL.",
+  "creators": [
+    {
+      "name": "Chaulagain, Aaryan",
+      "affiliation": "Independent",
+      "orcid": "0009-0007-0460-7116"
+    }
+  ],
+  "access_right": "open",
+  "license": "CC-BY-4.0",
+  "upload_type": "software",
+  "version": "1.0.0",
+  "keywords": [
+    "UAV",
+    "Morphing Wing",
+    "Aerodynamics",
+    "Aeroelasticity",
+    "Swarm Robotics",
+    "Physics-Informed Neural Networks",
+    "Digital Twin",
+    "Vortex Lattice Method"
+  ]
+}
