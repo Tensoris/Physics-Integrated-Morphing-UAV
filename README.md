@@ -4,7 +4,6 @@ A modular Python-based framework designed to bridge the gap between analytical a
 
 The system centers on a real-time **Digital Twin dashboard**, enabling interactive visualization of how wing morphing influences aerodynamic performance, structural response, and acoustic characteristics.
 
-<br>
 
 ## Architecture Overview
 
@@ -39,7 +38,6 @@ The simulator is structured into five progressive research tiers:
 - Surrogate modeling for rapid evaluation
 - Anomaly detection (flutter, structural instability)
 
-<br>
 
 ## Installation
 
@@ -57,7 +55,6 @@ Install Dependencies
 ```
 pip install -r requirements.txt
 
-<br>
 ```
 
 Usage
@@ -78,7 +75,6 @@ Interactive Controls
 
 All updates propagate in real time across aerodynamic, structural, and acoustic models.
 
-<br>
 ```
 
 Data Export
@@ -97,7 +93,7 @@ Designed for downstream analysis and integration into custom pipelines.
 ```
 
 Citation
-
+```
 @software{morphing_uav_simulator_2026,
   author       = {Aaryan Chaulagain},
   title        = {Morphing UAV Simulator Suite: High-Fidelity Research Architecture},
@@ -106,8 +102,7 @@ Citation
   doi          = {10.5281/zenodo.19258496},
   url          = {https://doi.org/10.5281/zenodo.19258496}
 }
-
-<br>
+```
 
 
 License
@@ -121,7 +116,6 @@ Permissions:
 Condition:
 	•	Attribution to the original author is required
 
-<br>
 
 
 Research Scope
@@ -133,7 +127,6 @@ This framework is intended for:
 	•	Physics-informed machine learning
 	•	Digital twin system development
 
-<br>
 
 
 Notes
