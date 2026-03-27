@@ -1,52 +1,139 @@
-Morphing UAV Simulator: High-Fidelity Research Architecture
-_Note: Must be deployed in local server_
+# Morphing UAV Simulator: High-Fidelity Research Architecture
 
-Welcome! This simulator is a modular Python-based framework built to bridge the gap between simple analytical models and heavy-duty CFD/FEM suites. It is designed specifically for researchers exploring the intersection of morphing wing structures, swarm intelligence, and physics-informed AI.
-The core of this project is a real-time, human-in-the-loop Digital Twin dashboard that lets you visualize how changing a wing's shape affects its performance, stability, and even its acoustic signature.
-Research Tiers
-The architecture is organized into five progressive levels, moving from basic physics to complex autonomous systems:
-Level 1: High-Fidelity Aerodynamics Goes beyond basic approximations using a true Numerical Vortex Lattice Method (VLM). It includes Prandtl-Glauert compressibility corrections and generates a 3D wing mesh mapped with real-time circulation loads.
-Level 2: Structural FEM & Dynamics Simulates how the wing actually bends and twists using 1D Euler-Bernoulli and Timoshenko beam theory. It also features a closed-loop PID controller designed to test active gust rejection through morphing.
-Level 3: Extreme Physics For high-speed or high-altitude studies, this tier calculates hypersonic thermal heating (Sutton-Graves), structural expansion, and broadband noise (Ffowcs Williams-Hawkings).
-Level 4: Swarm Intelligence A multi-agent environment where UAVs use flocking algorithms to navigate procedural 3D terrain while maintaining nap-of-the-earth (NOE) clearance.
-Level 5: AI Surrogates & Digital Twin This is the "brain" of the system, providing live convergence monitoring for Physics-Informed Neural Networks (PINNs) and real-time anomaly detection for structural risks like flutter.
-Setting Up
-Clone the project:
-git clone [https://github.com/yourusername/morphing-uav-simulator.git](https://github.com/yourusername/morphing-uav-simulator.git)
+A modular Python-based framework designed to bridge the gap between analytical aerodynamics and high-cost CFD/FEM systems. This simulator targets research at the intersection of morphing wing structures, swarm intelligence, and physics-informed AI.
+
+The system centers on a real-time **Digital Twin dashboard**, enabling interactive visualization of how wing morphing influences aerodynamic performance, structural response, and acoustic characteristics.
+
+---
+
+## Architecture Overview
+
+The simulator is structured into five progressive research tiers:
+
+### **Level 1 — High-Fidelity Aerodynamics**
+- Numerical Vortex Lattice Method (VLM)
+- Prandtl–Glauert compressibility corrections
+- 3D wing mesh generation
+- Real-time circulation and load distribution mapping
+
+### **Level 2 — Structural FEM & Dynamics**
+- Euler–Bernoulli beam theory (1D)
+- Timoshenko beam theory (shear deformation effects)
+- Aeroelastic deformation (bending and twist)
+- Closed-loop PID controller for active gust rejection
+
+### **Level 3 — Extreme Physics**
+- Hypersonic thermal modeling (Sutton–Graves equation)
+- Thermal expansion effects on structure
+- Broadband aeroacoustic prediction (Ffowcs Williams–Hawkings)
+
+### **Level 4 — Swarm Intelligence**
+- Multi-agent UAV environment
+- Flocking and coordination algorithms
+- Procedural 3D terrain generation
+- Nap-of-the-earth (NOE) navigation constraints
+
+### **Level 5 — AI Surrogates & Digital Twin**
+- Physics-Informed Neural Networks (PINNs)
+- Real-time convergence monitoring
+- Surrogate modeling for rapid evaluation
+- Anomaly detection (flutter, structural instability)
+
+---
+
+## Installation
+
+### Clone Repository
+bash
+git clone https://github.com/yourusername/morphing-uav-simulator.git
 cd morphing-uav-simulator
 
+Create Virtual Environment
 
-Prepare your environment:
-I recommend using a virtual environment to keep things clean:
 python -m venv venv
-source venv/bin/activate  # For Windows users: .\venv\Scripts\activate
+source venv/bin/activate      # Windows: .\venv\Scripts\activate
 
+Install Dependencies
 
-Install the requirements:
-The simulator uses graceful fallbacks for most heavy libraries, but for the full experience (PINNs, JIT acceleration, and RL), you'll want them all:
 pip install -r requirements.txt
 
 
-Getting Started
-To launch the Digital Twin Console, run the main script:
+⸻
+
+Usage
+
+Launch the Digital Twin dashboard:
+
 python morphing-uav.py
 
+Access the interface at:
 
-Once it's running, open your browser to http://127.0.0.1:8050/. You can adjust morphing parameters like span, sweep, and twist in real-time and watch the physics engines update the plots instantly.
-Data and Analysis
-Research isn't much good without data. You can click the "Download Dataset" button directly in the dashboard to export a comprehensive CSV containing the current spanwise loading, bending moments, and aerodynamic coefficients for use in your own post-processing scripts.
-How to Cite
-If this simulator helps your research, please cite it using the record below:
+http://127.0.0.1:8050/
+
+Interactive Controls
+	•	Wing span
+	•	Sweep angle
+	•	Twist distribution
+	•	Morphing parameters
+
+All updates propagate in real time across aerodynamic, structural, and acoustic models.
+
+⸻
+
+Data Export
+
+The dashboard includes a Download Dataset feature.
+
+Exported CSV includes:
+	•	Spanwise lift distribution
+	•	Circulation values
+	•	Bending moments
+	•	Aerodynamic coefficients
+
+Designed for downstream analysis and integration into custom pipelines.
+
+⸻
+
+Citation
+
 @software{morphing_uav_simulator_2026,
-  author       = Aaryan Chaulagain,
+  author       = {Aaryan Chaulagain},
   title        = {Morphing UAV Simulator Suite: High-Fidelity Research Architecture},
   year         = 2026,
   publisher    = {Zenodo},
   doi          = {10.5281/zenodo.19258496},
-  url          = {[https://doi.org/10.5281/zenodo.19258496](https://doi.org/10.5281/zenodo.19258496)}
+  url          = {https://doi.org/10.5281/zenodo.19258496}
 }
 
 
+⸻
+
 License
-This work is licensed under a Creative Commons Attribution 4.0 International License (CC BY 4.0).
-This license allows you to distribute, remix, adapt, and build upon the material in any medium or format, so long as attribution is given to the creator.
+
+This project is licensed under the Creative Commons Attribution 4.0 International License (CC BY 4.0).
+
+Permissions:
+	•	Use, modify, and distribute
+	•	Commercial and non-commercial applications
+
+Condition:
+	•	Attribution to the original author is required
+
+⸻
+
+Research Scope
+
+This framework is intended for:
+	•	Aeroelasticity research
+	•	Morphing wing optimization
+	•	Multi-agent UAV coordination
+	•	Physics-informed machine learning
+	•	Digital twin system development
+
+⸻
+
+Notes
+	•	Designed with modular fallback support for heavy dependencies
+	•	Scales from lightweight experimentation to advanced research workflows
+	•	Compatible with JIT acceleration, RL environments, and surrogate modeling pipelines
+
